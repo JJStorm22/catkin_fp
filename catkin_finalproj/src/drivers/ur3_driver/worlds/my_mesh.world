@@ -8,6 +8,52 @@
       <uri>model://sun</uri>
     </include>
     <model name='bowl'>
+      <pose frame=''>0.159801 .560905 .78 0 -0 0</pose>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.000250308</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000250308</iyy>
+            <iyz>0</iyz>
+            <izz>0.0004802</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.098</radius>
+              <length>0.035</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://bowl/meshes/bowl.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <pose frame=''>-0.126221 -0.193462 .78 0 -0 0</pose>
+    </model>
+    <model name='burger_bowl'>
       <pose frame=''>0 -0.193462 .78 0 -0 0</pose>
       <link name='link'>
         <inertial>
@@ -43,8 +89,6 @@
             </friction>
           </surface>
         </collision>
-        <!-- <self_collide>true</self_collide> -->
-        <!-- <kinematic>0</kinematic> --> -->
         <visual name='visual'>
           <geometry>
             <mesh>
@@ -55,48 +99,6 @@
       </link>
       <pose frame=''>-0.126221 -0.193462 .78 0 -0 0</pose>
     </model>
-    <!-- <model name="burger_v1">
-      <pose>0 1 .78  0 0 0</pose>
-      <static>true</static>
-      <link name="body">
-        <visual name="visual">
-          <geometry>
-            <mesh>
-            <uri>file://burger_v1.stl</uri>
-            <scale>0.005 0.005 0.005</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model> -->
-    <!-- <model name="Bottom_Bun">
-      <pose>.3 1 .78  0 0 0</pose>
-      <static>true</static>
-      <link name="body">
-        <visual name="visual">
-          <geometry>
-            <mesh>
-            <uri>file://Bun_v1.stl</uri>
-            <scale>0.005 0.005 0.005</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model>
-    <model name="Cheese_slice">
-      <pose>.2 .7 .78  0 0 0</pose>
-      <static>true</static>
-      <link name="body">
-        <visual name="visual">
-          <geometry>
-            <mesh>
-            <uri>file://cheese_v3.stl</uri>
-            <scale>0.005 0.005 0.005</scale>
-            </mesh>
-          </geometry>
-        </visual>
-      </link>
-    </model> -->
     <model name='cafe_table'>
       <static>1</static>
       <link name='link'>

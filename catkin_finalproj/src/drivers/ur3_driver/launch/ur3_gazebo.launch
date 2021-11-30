@@ -19,10 +19,15 @@
     <arg name="limited" value="$(arg limited)"/>
   </include>
 
-  <node name="spawn_bun" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/bun.urdf -urdf -model bun -x -0.3 -y .55 -z .78" respawn="false" output="screen" />
-  <node name="spawn_cheese" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/cheese.urdf -urdf -model cheese -x -0.036 -y .50 -z .78" respawn="false" output="screen" />
-  <node name="spawn_burger" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/burger.urdf -urdf -model burger -x 0.16 -y .55 -z .78" respawn="false" output="screen" />
-  <node name="spawn_bottom_bun" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/bun.urdf -urdf -model bottom_bun -x 0.33 -y .55 -z .78" respawn="false" output="screen" />
+  <node name="spawn_bun" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/bottom_bun.urdf -urdf -model bottom_bun -x -0.3 -y .55 -z .78" respawn="false" output="screen" />
+  <node name="spawn_bun2" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/bottom_bun.urdf -urdf -model bottom_bun2 -x -0.3 -y .70 -z .78" respawn="false" output="screen" />
+  <!-- <node name="spawn_cheese" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/cheese.urdf -urdf -model cheese -x 0.33 -y .55 -z .78" respawn="false" output="screen" /> -->
+  <node name="spawn_burger1" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/burger.urdf -urdf -model burger1 -x 0.16 -y .55 -z .8" respawn="false" output="screen" />
+  <node name="spawn_burger2" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/burger.urdf -urdf -model burger2 -x 0.16 -y .55 -z .85" respawn="false" output="screen" />
+  <node name="spawn_burger3" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/burger.urdf -urdf -model burger3 -x 0.16 -y .55 -z .9" respawn="false" output="screen" />
+
+  <node name="spawn_bottom_bun" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/bun.urdf -urdf -model bun -x -0.05 -y .55 -z .78" respawn="false" output="screen" />
+  <node name="spawn_bottom_bun2" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/bun.urdf -urdf -model bun2 -x -0.05 -y .70 -z .78" respawn="false" output="screen" />
 
   <node name="spawn_base_plate" pkg="gazebo_ros" type="spawn_model" args="-file $(find ur_description)/urdf/base_plate.urdf -urdf -model plate -x -0.15 -y 0.15 -z .8" respawn="false" output="screen" />
 
