@@ -7,7 +7,7 @@
     <include>
       <uri>model://sun</uri>
     </include>
-    <model name='bowl'>
+    <!-- <model name='bowl'>
       <pose frame=''>0.159801 .560905 .78 0 -0 0</pose>
       <link name='link'>
         <inertial>
@@ -52,8 +52,8 @@
         </visual>
       </link>
       <pose frame=''>-0.126221 -0.193462 .78 0 -0 0</pose>
-    </model>
-    <model name='burger_bowl'>
+    </model> -->
+    <!-- <model name='burger_bowl'>
       <pose frame=''>0 -0.193462 .78 0 -0 0</pose>
       <link name='link'>
         <inertial>
@@ -98,7 +98,7 @@
         </visual>
       </link>
       <pose frame=''>-0.126221 -0.193462 .78 0 -0 0</pose>
-    </model>
+    </model> -->
     <model name='cafe_table'>
       <static>1</static>
       <link name='link'>
