@@ -6,7 +6,8 @@
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="package://ur_description/meshes/burger_v1.stl" scale="0.003 0.003 0.003"/>
+      <!-- <mesh filename="package://ur_description/meshes/burger_v1.stl" scale="0.003 0.003 0.003"/> -->
+      <box size="0.075 0.075 0.015" />
     </geometry>
   </collision>
 
@@ -24,9 +25,11 @@
       ixx="0.0" ixy="0.0"  ixz="0.0"
       iyy="0.0" iyz="0.0"  izz="0.0" />
   </inertial>
+  <static>true</static>
 </link>
 
 <gazebo reference="burger_link">
+  <static>1</static>
   <visual>
     <material>
       <ambient>0.55 0.27 0.07 1.0</ambient>
@@ -35,6 +38,12 @@
       <emissive>0 0 0 1.0</emissive>
     </material>
   </visual>
+  <mu1>100</mu1>
+  <mu2>100</mu2>
+  <kp>2147483647</kp>
+  <kd>1</kd>
+  <maxVel>0</maxVel>
+  <minDepth>0.001</minDepth>
 </gazebo>
 
 </robot>
